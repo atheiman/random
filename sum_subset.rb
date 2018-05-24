@@ -41,8 +41,8 @@ require 'rspec'
 
 describe __FILE__ do
   it 'finds the smallest subset of a list that adds to a sum' do
-    expect(sum_subset(24, [12, 1, 61, 5, 9, 2])).to match_array([12, 9, 2, 1])
-    expect(sum_subset(12, [2, 3, 5, 3, 4, 5, 3, 3])).to match_array([2, 5, 5])
+    expect(sum_subset(24, [12, 1, 61, 5, 9, 2].shuffle)).to match_array([12, 9, 2, 1])
+    expect(sum_subset(12, [2, 3, 5, 3, 5, 3, 3].shuffle)).to match_array([2, 5, 5])
   end
 
   it 'returns nil for an impossible sum and list combination' do
